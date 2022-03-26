@@ -1,3 +1,199 @@
 :root{
     --rojoPokedex: #bd0f34;
+    --focoBlanco: aqua;
+    --focoARojo: red;
+    --focoAmbar: yellow;
+    --focoVerde: green;
+
+    --bordePantalla: #dedede;
+    --pantalla-borde: 256px;
+    --fondoPantalla: #f1f2d3;
+    --fondoPantallID: #55ab62;
+
+    --botonA: 48px;
+    --ledW: 48px;
+    --ledH: 16px;
+}
+
+.pokedex{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 768px;
+    margin: auto;
+}
+
+.superior { grid-area: 1 / 1 / 2 / 2; }
+.izquierda { grid-area: 2 / 1 / 6 / 2; }
+.derecha { grid-area: 2 / 2 / 6 / 3; }
+
+@media screen and (max-width: 767px){
+    /* .pokedex {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .superior { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 2 / 1 / 6 / 2; }
+    .derecha { grid-area: 6 / 1 / 10 / 2; } */
+    .pokedex{
+        display: flex;
+        flex-direction: column;
+        width: 366px;
+    }
+
+    /* .superior, .izquierda, .derecha { width: 100%; } */
+}
+
+.superior, .izquierda, .derecha{
+    background-color: var(--rojoPokedex);
+}
+
+.izquierda{
+    border: solid black;
+    padding: 16px;
+}
+
+.foquitos{
+    display: flex;
+}
+
+.foquito{
+    border-radius: 50%;
+    border: solid 4px rgb(121, 121, 121);
+    width: 20px;
+    height: 20px;
+}
+
+.blanco {
+    width: 50px;
+    height: 50px;
+    background-color: var(--focoBlanco);
+}
+
+.rojo {
+
+    background-color: var(--focoARojo);
+}
+
+.ambar {
+    background-color: var(--focoAmbar);
+}
+
+.verde {
+    background-color: var(--focoVerde);
+}
+
+.pantalla-border{
+    /* width: var(--pantalla-borde); */
+    width: 100%;
+    height: var(--pantalla-borde);
+    background-color: var(--bordePantalla);
+
+    border-radius: 16px;
+    position: relative;
+    margin: 12px 0;
+    /* padding: 16px; */
+}
+
+.pantalla {
+    width: 90%;
+    height: 90%;
+    background-color: var(--fondoPantalla);
+    border-radius: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.controles {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+
+    width: 100%;
+}
+
+.botonA {
+    grid-area: 1 / 1 / 2 / 2;
+    width: var(--botonA);
+    height: var(--botonA);
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+}
+.leds {
+    grid-area: 1 / 2 / 2 / 5;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+.pantallaID {
+    grid-area: 2 / 2 / 3 / 5;
+    border-radius: 4px;
+    background-color: var(--fondoPantallID);
+    position: relative;
+}
+.cruceta {
+    grid-area: 1 / 5 / 3 / 7;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    cursor: pointer;
+}
+
+.led1{
+    background-color: tomato;
+}
+
+.led2{
+    background-color: dodgerblue;
+
+}
+
+.led1, .led2{
+    width: var(--ledW);
+    height: var(--ledH);
+    border-radius: 16px;
+}
+
+.contenidoID{
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.div1 { grid-area: 1 / 2 / 4 / 3; }
+.div2 { grid-area: 2 / 1 / 3 / 2; }
+.div3 { grid-area: 2 / 3 / 3 / 4; }
+
+.div1, .div2, .div3 {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 8px;
+}
+
+.div2 {
+    border-radius: 8px 0px 0px 8px;
+}
+
+.div3{
+    border-radius: 0px 8px 8px 0px;
 }
