@@ -11,8 +11,20 @@
         <input type="text" name="" id="pokeName">
         <input type="button" value="Buscar" onclick="fetchPokemon();">
         <br>
-        <img src="" alt="pokemon" id="pokeImg">
+        <br>
+        <img src="" alt="pokemon" id="pokeImg" style="width: 256px; image-rendering: pixelated;"><br>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name ="nombre" value="" disabled><br>
+        <label for="ide">ID</label>
+        <input type="text" id="ide" name ="ide" value="" disabled><br>
+        <label for="height">Height</label>
+        <input type="text" id="height" name ="height" value="" disabled><br>
+        <label for="weight">Weight</label>
+        <input type="text" id="weight" name ="weight" value="" disabled><br>
+        <ul id="types"></ul>
+        <ul id="moves"></ul>
     </div>
+    
     <script src="js/main.js"></script>
 </body>
 </html>
