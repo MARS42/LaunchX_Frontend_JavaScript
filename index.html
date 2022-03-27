@@ -11,9 +11,8 @@
     <div>
         <input type="text" name="" id="pokeName">
         <input type="button" value="Buscar" onclick="fetchPokemon();">
+        <!-- <br>
         <br>
-        <br>
-        <img src="" alt="pokemon" id="pokeImg" style="width: 256px; image-rendering: pixelated;"><br>
         <label for="nombre">Nombre</label>
         <input type="text" id="nombre" name ="nombre" value="" disabled><br>
         <label for="ide">ID</label>
@@ -23,7 +22,7 @@
         <label for="weight">Weight</label>
         <input type="text" id="weight" name ="weight" value="" disabled><br>
         <ul id="types"></ul>
-        <ul id="moves"></ul>
+        <ul id="moves"></ul> -->
     </div>
 
     <div class="pokedex">
@@ -38,19 +37,17 @@
         <div class="izquierda">
             <div class="pantalla-border">
                 <div class="pantalla">
-                    <img src="xs" alt="">
+                    <img id ="pokeImg" src="xs" alt="">
                 </div>
             </div>
                 <div class="controles">
-                    <div class="botonA"> </div>
+                    <div class="botonA"></div>
                     <div class="leds">
                         <div class="led1"></div>
                         <div class="led2"></div>
                     </div>
                     <div class="pantallaID">
-                        <div class="contenidoID">
-                            No. xd
-                        </div>
+                        <div id="NoID" class="contenidoID"></div>
                     </div>
                     <div class="cruceta">
                         <div class="div1"> </div>
@@ -64,49 +61,36 @@
                 <div class="caracteristicas">
                     <div class="statsBg">
                         <div id="tipos" class="tipos">Tipo:
-                            <div class="tipo water">Water</div>
-                            <div class="tipo fire">Water</div>
-                            <div class="tipo poison">Water</div>
                         </div>
                         <div class="stats">
                             <div class="stat">
-                                <h4 id="ps">150</h4>
+                                <h4 id="ps"></h4>
                                 <h5>PS</h5>
                             </div>
                             <div class="stat">
-                                <h4 id="atk">150</h4>
+                                <h4 id="atk"></h4>
                                 <h5>ATK</h5>
                             </div>
                             <div class="stat">
-                                <h4 id="def">150</h4>
+                                <h4 id="def"></h4>
                                 <h5>DEF</h5>
                             </div>
                             <div class="stat">
-                                <h4 id="spatk">100</h4>
+                                <h4 id="spatk"></h4>
                                 <h5>SP.ATK</h5>
                             </div>
                             <div class="stat">
-                                <h4 id="spdef">45</h4>
+                                <h4 id="spdef"></h4>
                                 <h5>SP.DEF</h5>
                             </div>
                             <div class="stat">
-                                <h4 id="speed">45</h4>
+                                <h4 id="speed"></h4>
                                 <h5>SPEED</h5>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="teclado">
-                    <div class="t1"> </div>
-                    <div class="t2"> </div>
-                    <div class="t3"> </div>
-                    <div class="t4"> </div>
-                    <div class="t5"> </div>
-                    <div class="t6"> </div>
-                    <div class="t7"> </div>
-                    <div class="t8"> </div>
-                    <div class="t9"> </div>
-                    <div class="t10"> </div>
+                <div id="attacks" class="teclado">
                 </div>
                 <div class="dosTeclas">
                     <div class="tt1"> </div>
@@ -116,8 +100,8 @@
                     <div class="led2"></div>
                     <div class="led2"></div>
                 </div>
-                <div class="altura">Altura: 0.5m</div>
-                <div class="peso">Peso: 80kg</div>
+                <div id="altura" class="altura">Altura:</div>
+                <div id="peso" class="peso">Peso:</div>
             </div>
         </div>
     </div>
