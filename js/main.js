@@ -22,7 +22,7 @@ const fetchPokemon = () => {
         if (data) {
             console.log(data);
 
-            const { id, name, height, weight, moves, types, sprites } = data;
+            const { id, name, height, weight, moves, types, sprites, stats } = data;
 
             llenarInput("nombre", name);
             llenarInput("ide", id);
@@ -34,6 +34,8 @@ const fetchPokemon = () => {
 
             const typesNames = types.map((element) => element.type.name);
             llenarLista("types", typesNames);
+
+            const statsValueName = stats.map((element) => [element.base_stat, element.stat.name]);
 
             let pokeImg = sprites.front_default;
             pokeImage(pokeImg);
@@ -51,6 +53,8 @@ const llenarLista = (id, items) => {
     const listItems = items.reduce((acc, i) => acc + `<li>${ i }</li>`, "");
     ul.innerHTML = listItems;
 }
+
+const
 
 const pokeImage = (url) => {
     const pokePhoto = document.getElementById("pokeImg");

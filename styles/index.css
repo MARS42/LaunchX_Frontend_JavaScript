@@ -1,5 +1,6 @@
 :root{
     --rojoPokedex: #bd0f34;
+    --rojoPokedexBg: #791228;
     --focoBlanco: aqua;
     --focoARojo: red;
     --focoAmbar: yellow;
@@ -13,6 +14,9 @@
     --botonA: 48px;
     --ledW: 48px;
     --ledH: 16px;
+
+    --statsColor: #032d29;
+    --teclado: #31a7f1;
 }
 
 .pokedex{
@@ -47,6 +51,10 @@
         width: 366px;
     }
 
+    .derecha{
+        height: 424px;;
+    }
+
     /* .superior, .izquierda, .derecha { width: 100%; } */
 }
 
@@ -54,9 +62,11 @@
     background-color: var(--rojoPokedex);
 }
 
-.izquierda{
-    border: solid black;
+.superior, .izquierda, .derecha{
+    /* border: solid black; */
     padding: 16px;
+    border: solid 4px var(--rojoPokedexBg);
+    border-radius: 8px;
 }
 
 .foquitos{
@@ -160,7 +170,6 @@
 
 .led2{
     background-color: dodgerblue;
-
 }
 
 .led1, .led2{
@@ -197,3 +206,147 @@
 .div3{
     border-radius: 0px 8px 8px 0px;
 }
+
+.informacion-poke {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    height: 100%;
+    /* padding: 16px; */
+}
+
+.caracteristicas { grid-area: 1 / 1 / 3 / 3; }
+.teclado { grid-area: 3 / 1 / 4 / 3; }
+.dosTeclas { grid-area: 4 / 1 / 5 / 2; }
+.indicador { grid-area: 4 / 2 / 5 / 3; }
+.altura { grid-area: 5 / 1 / 6 / 2; }
+.peso { grid-area: 5 / 2 / 6 / 3; }
+
+.caracteristicas{
+    color: yellow;
+}
+
+.statsBg{
+    background-color: var(--statsColor);
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.tipo{
+    margin: 16px;
+}
+
+.stats{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1r;
+    text-align: center;
+    /* height: 100%; */
+}
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: var(--teclado);
+    width: 100%;
+    height: 100%;
+    border: solid 4px #2065ec;
+    border-radius: 8px;
+}
+
+.t1 { grid-area: 1 / 1 / 2 / 2; }
+.t2 { grid-area: 1 / 2 / 2 / 3; }
+.t3 { grid-area: 1 / 3 / 2 / 4; }
+.t4 { grid-area: 1 / 4 / 2 / 5; }
+.t5 { grid-area: 1 / 5 / 2 / 6; }
+.t6 { grid-area: 2 / 1 / 3 / 2; }
+.t7 { grid-area: 2 / 2 / 3 / 3; }
+.t8 { grid-area: 2 / 3 / 3 / 4; }
+.t9 { grid-area: 2 / 4 / 3 / 5; }
+.t10 { grid-area: 2 / 5 / 3 / 6; }
+
+.t1, .t2, .t3, .t4, .t5, .t6, .t7, .t8, .t9, .t10 {
+    border: solid 1px #2065ec;
+}
+
+.dosTeclas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    background-color: #dedede;
+    border: solid 4px #747474;
+    border-radius: 8px;
+
+    width: 100%;
+    height: 50%;
+    margin: auto;
+}
+
+.tt1 { grid-area: 1 / 1 / 2 / 2; }
+.tt2 { grid-area: 1 / 2 / 2 / 3; }
+
+.tt1, .tt2{
+    border: solid 1px #747474;
+}
+
+.indicador{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.altura, .peso{
+    background-color: var(--statsColor);
+    height: 100%;
+    border-radius: 4px;
+    color:yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tipos{
+    display: flex;
+    margin-left: 8px;
+    align-items: center;
+}
+
+.tipo{
+    margin: 2px;
+    padding: 2px;
+    border-radius: 4px;
+    color: white;
+}
+
+.bug {background-color: #c0ec20;}
+
+.water {background-color: #2065ec;}
+
+.dark { background-color: #250f0d;}
+.dragon { background-color: #575b97;}
+.electric { background-color: #f1c944;}
+.fairy { background-color: #dd6dff;}
+.fighting { background-color: #5e4624;}
+.fire { content: "Fire"; background-color: rgb(185, 42, 29)}
+.flying { background-color: rgb(29, 149, 185)}
+.ghost { background-color: rgb(39, 29, 185)}
+.grass { background-color: rgb(117, 223, 76)}
+.ground { background-color: rgb(184, 170, 91)}
+.ice { background-color: rgb(141, 233, 236)}
+.normal { background-color: rgb(155, 155, 155)}
+.poison { background-color: rgb(132, 39, 219)}
+.psychic { background-color: rgb(163, 71, 156)}
+.rock { background-color: rgb(117, 111, 72)}
+.steel { background-color: rgb(137, 141, 135)}
